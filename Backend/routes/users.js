@@ -1,6 +1,6 @@
   var express = require('express');
 var router = express.Router();
-var db = require('../db2')
+var db = require('../db')
 
 /* GET users listing. */
 router.post('/register', function(req, res, next) {
