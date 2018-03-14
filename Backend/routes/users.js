@@ -1,6 +1,6 @@
-var express = require('express');
+  var express = require('express');
 var router = express.Router();
-var db = require('../db')
+var db = require('../db2')
 
 /* GET users listing. */
 router.post('/register', function(req, res, next) {
@@ -10,8 +10,25 @@ router.post('/register', function(req, res, next) {
     email,
     password
   }
-
-  res.json(dataToInsert)
+  res.json(dataToInsert);
+  //
+  // const handler = function(err,result){
+  //   if(!err){
+  //     res.json({
+  //       sucess: true,
+  //       message: 'User Registered',
+  //       data: result
+  //     });
+  //   }
+  //   else{
+  //     res.json({
+  //       sucess: false,
+  //       message: 'Not user Registered',
+  //       error: err
+  //     });
+  //   }
+  // }
+  // db.register(dataToInsert,handler);
 });
 
 module.exports = router;
